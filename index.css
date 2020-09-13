@@ -1,62 +1,93 @@
 body{
     margin: 0px;
     padding: 0px;
-    position:center;
-
-    
+    position:center;  
 }
 .mainbox{
     height: 300vh;
     width: 100%;
     display:grid;
-    border:2px solid green;
     background-image: url(./images/backteam.jpg);
     background-repeat:no-repeat;
     background-size: 100%;
     grid-template-columns:repeat(1,1fr);
-    grid-template-rows:5% 40%; 
+    grid-template-rows:5% 35%; 
     grid-template-areas:"main-text"
                          "members";    
-    border:2px solid green;
+
   }
   .maintext{
-      margin-top:20px;
+      font-family: 'Yanone Kaffeesatz', sans-serif;
+      margin-top:2px;
       grid-area:main-text;
+      text-transform: capitalize;
       width: 100%;
       height: 100%;
-      font-size:30px;
+      font-size:40px;
       text-align:center;
       background-color: rgba(4, 66, 124, 0.6)
   }
+  p{
+    margin-bottom:10px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;  
+    text-transform: capitalize;
+    font-size:30px;
+    font-weight:bold;
+  }
  .container{
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       margin-left:20%;
-      margin-top:30px;
+      margin-top:80px;
       grid-area: members;
       display:flex;
       width: 70%;
       flex-wrap: wrap;
       flex-direction: row;
-      flex-flow: wrap;
       text-align:center;
-      /* border:2px solid red; */
+      
   }
 
 .member{
       height: 200px;
       margin:10px;
       /* border:2px solid blue; */
-      
-     
+
   }
+  
   .mainbox .container .member img{
-    height:300px;
-    width: 200px;
+    height:270px;
+    width: 230px;
     border:1px solid #ddd;
     border-radius: 5px;
 }
 h6{  
-float:right;
+    float:right;
 margin-left:1px;
 writing-mode: vertical-lr;
 text-orientation: upright;
+}
+@media only screen and (max-width: 600px) { 
+    .mainbox{
+        height:500vh;
+        width: 100%;
+        display:grid;
+        background-image:none;
+        background-color: gold;
+        grid-template-columns:repeat(1,1fr);
+        grid-template-rows:5% 12% 12% 12% 12% 12% 12%; 
+        grid-template-areas:"main-text"
+                             "members"
+                             "members"
+                             "members"
+                             "members"
+                             "members"
+                             "members";   
+   }
+   p{
+    margin-top:90px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;  
+    text-transform: capitalize;
+    font-size:30px;
+    font-weight:bold;
+   }
 }
